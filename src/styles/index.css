@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl;
+  }
+}
+
+body {
+  @apply bg-gray-900 text-white overflow-hidden;
+  font-family: 'Inter', sans-serif;
+}
