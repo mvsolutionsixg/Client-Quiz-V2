@@ -48,7 +48,7 @@ const Register = () => {
             <div
                 className="absolute inset-0 z-0"
                 style={{
-                    backgroundImage: 'url("/assets/mv-wallpaper.png")',
+                    backgroundImage: 'url("/public/mv-wallpaper.png")',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}
@@ -61,7 +61,7 @@ const Register = () => {
             <div className="relative z-10 w-full max-w-md flex flex-col items-center justify-center p-6 text-center space-y-8">
                 <div className="space-y-2">
                     <img
-                        src="/assets/Logo.png"
+                        src="/public/Logo.png"
                         alt="Tally Logo"
                         className="w-20 mx-auto mb-4 mt-7"
                     />
