@@ -10,7 +10,7 @@ const Results = () => {
     const total = yesCount + noCount;
     const percentage = total > 0 ? Math.round((yesCount / total) * 100) : 0;
 
-    const whatsappLink = `https://wa.me/919876543210?text=I+want+to+use+more+Tally+features`; // Placeholder number
+    const whatsappLink = `https://wa.me/9731542463?text=I+want+to+use+more+Tally+features`; // Placeholder number
 
     return (
         <div className="flex flex-col items-center w-full h-full p-6 space-y-8 overflow-y-auto">

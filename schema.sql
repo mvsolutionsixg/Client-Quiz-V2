@@ -2,6 +2,7 @@
 create table if not exists public.users (
   id uuid primary key default gen_random_uuid(),
   phone text not null,
+  company_name text not null default 'N/A',
   email text,
   created_at timestamp default now()
 );

@@ -3,37 +3,22 @@ import { supabase } from './supabase';
 export const initSupabase = async () => {
     // Run asynchronously without blocking UI
     setTimeout(async () => {
+        console.log('Checking database connection...');
+
         try {
-            console.log('Checking database tables...');
+            // Lightweight check to see if we can reach the users table
+            const { data, error } = await supabase.from('users').select('id').limit(1);
 
-            // 1. Check if 'users' table exists by attempting a lightweight select
-            // If table doesn't exist, Supabase returns error 42P01 (undefined_table)
-            const { error } = await supabase.from('users').select('id').limit(1);
-
-            if (error && error.code === '42P01') {
-                console.warn('Tables missing. Attempting auto-initialization via API...');
-
-                // Call the server-side endpoint to run the DDL
-                // Note: This requires the /api/db-init endpoint to be hosted and configured
-                try {
-                    const res = await fetch('/api/db-init', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' }
-                    });
-
-                    if (!res.ok) {
-                        console.error('Failed to initialize DB:', await res.text());
-                    } else {
-                        console.log('Database initialized successfully.');
-                    }
-                } catch (fetchErr) {
-                    console.error('API endpoint /api/db-init not reachable.', fetchErr);
+            if (error) {
+                console.warn('Database check returned an error:', error.message);
+                if (error.code === '42P01') {
+                    console.error("CRITICAL: The 'users' table is missing in Supabase. Please ensure your database schema is set up manually.");
                 }
             } else {
-                console.log('Database tables appear to exist.');
+                console.log('Database connected and users table found.');
             }
         } catch (err) {
-            console.error('Error during DB init check:', err);
+            console.error('Error during DB connection check:', err);
         }
     }, 1000);
 };

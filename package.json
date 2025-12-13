@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run db:sync && vite",
+    "db:sync": "node scripts/syncSchema.js",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -13,6 +14,7 @@
     "@supabase/supabase-js": "^2.87.1",
     "chart.js": "^4.5.1",
     "clsx": "^2.1.1",
+    "dotenv": "^17.2.3",
     "framer-motion": "^12.23.25",
     "lucide-react": "^0.556.0",
     "pg": "^8.16.3",
