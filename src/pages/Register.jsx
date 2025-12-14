@@ -48,9 +48,11 @@ const Register = () => {
             <div
                 className="absolute inset-0 z-0"
                 style={{
-                    backgroundImage: 'url("https://raw.github.com/mvsolutionsixg/Client-Quiz-V2/blo/main/public/mv-wallpaper.png")',
+                    backgroundImage:
+                        'url("https://raw.githubusercontent.com/mvsolutionsixg/Client-Quiz-V2/main/public/mv-wallpaper.png")',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
                 }}
             />
 

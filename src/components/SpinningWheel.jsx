@@ -184,7 +184,7 @@ const SpinningWheel = ({ activeIndex, items }) => {
             {/* Center Hub / Logo */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="w-24 h-24 bg-white rounded-full shadow-lg z-10 flex items-center justify-center">
-                    <img src="/assets/tally.png" alt="Tally" className="w-16 opacity-90" />
+                    <img src="https://raw.githubusercontent.com/mvsolutionsixg/Client-Quiz-V2/main/public/assets/tally.png" alt="Tally" className="w-16 opacity-90" />
                 </div>
             </div>
 
