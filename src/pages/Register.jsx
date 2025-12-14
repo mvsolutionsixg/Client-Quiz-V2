@@ -61,8 +61,7 @@ const Register = () => {
             <div className="relative z-10 w-full max-w-md flex flex-col items-center justify-center p-6 text-center space-y-8">
                 <div className="space-y-2">
                     <img
-                        src="https://github.com/mvsolutionsixg/Client-Quiz-V2/blob/main/public/Logo.png"
-                        alt="Tally Logo"
+                        src="https://raw.githubusercontent.com/mvsolutionsixg/Client-Quiz-V2/main/public/Logo.png" alt="Tally Logo"
                         className="w-20 mx-auto mb-4 mt-7"
                     />
                     <p
