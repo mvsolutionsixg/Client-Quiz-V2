@@ -13,6 +13,12 @@ const Register = () => {
     const handleStart = async (e) => {
         e.preventDefault();
 
+        // Phone validation
+        if (phone.length !== 10) {
+            setError('Phone number must contain exactly 10 digits');
+            return;
+        }
+
         setLoading(true);
         setError('');
 
@@ -83,10 +89,14 @@ const Register = () => {
                         <input
                             type="tel"
                             value={phone}
-                            onChange={(e) => setPhone(e.target.value)}
+                            onChange={(e) => {
+                                const val = e.target.value.replace(/\D/g, '').slice(0, 10);
+                                setPhone(val);
+                            }}
                             placeholder="Enter your mobile number"
                             className="w-full bg-brand-dark/50 border border-tally-green/30 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-tally-green"
                         />
+                        {error && <p className="text-red-400 text-sm">{error}</p>}
                     </div>
 
                     <div className="space-y-2 text-left">
@@ -111,7 +121,7 @@ const Register = () => {
                         />
                     </div>
 
-                    {error && <p className="text-red-400 text-sm">{error}</p>}
+
 
                     <button
                         type="submit"

@@ -22,21 +22,21 @@ export const QUESTIONS = [
     },
     {
         id: 4,
-        text: "Financial Needs\n(Tally Capital)",
+        text: "Compliance 1\n(eTDS 24Q-etc)",
         icon: "Banknote",
         color: "#F59E0B", // Amber/Gold
         bgColor: "#FEF3C7"
     },
     {
         id: 5,
-        text: "Reporting\nAccessibility",
+        text: "Payroll\n(ESI, PF, PT ITEDS)",
         icon: "PieChart",
         color: "#7C3AED", // Violet
         bgColor: "#EDE9FE"
     },
     {
         id: 6,
-        text: "Compliance\n(GST, E-invoice)",
+        text: "Compliance 2\n(GST, E-invoice)",
         icon: "ShieldCheck",
         color: "#E11D48", // Rose Red
         bgColor: "#FFE4E6"

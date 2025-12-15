@@ -50,7 +50,7 @@ const Results = () => {
                     className="flex items-center justify-center w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95 gap-3"
                 >
                     <MessageCircle size={24} />
-                    <span>Utilize Features Now</span>
+                    <span>Unlock More Value from Tally Prime</span>
                 </a>
                 <p className="text-center text-xs text-gray-500 mt-4">
                     Click to chat with our Tally Experts
